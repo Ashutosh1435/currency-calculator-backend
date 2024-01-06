@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 
+
 //api endpoint for top currency  
 app.get('/api/topCurrencies', async (req, res) => {
     try {
