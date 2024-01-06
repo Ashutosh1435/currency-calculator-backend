@@ -19,17 +19,6 @@ app.get('/api/topCurrencies', async (req, res) => {
     }
 });
 
-//api endpoint for supported currencies
-app.get('/api/supportedCurrencies', async (req, res) => {
-    try {
-        const supportedCurrencies = await currencyController.getSupportedCurrencies();
-        res.json(supportedCurrencies);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
-
 //api endpoint for currecy conversion
 app.get('/api/convertCurrency', async (req, res) => {
 
